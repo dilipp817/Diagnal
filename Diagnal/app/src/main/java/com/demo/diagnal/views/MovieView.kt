@@ -6,6 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -30,12 +31,12 @@ fun MovieView(
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
-                .padding(8.dp)
+                .padding(dimensionResource(id = R.dimen.space_8))
         )
         Text(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(36.dp),
+                .height(dimensionResource(id = R.dimen.space_36)),
             text = movie.name,
             textAlign = TextAlign.Center
         )

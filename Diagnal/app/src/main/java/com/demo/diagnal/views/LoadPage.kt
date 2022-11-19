@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import com.demo.diagnal.R
 import com.demo.diagnal.models.Content
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 
 @Composable
@@ -40,7 +41,7 @@ fun LoadPage(
                 },
                 backgroundColor = colorResource(id = R.color.purple_500),
                 contentColor = Color.White,
-                elevation = 12.dp,
+                elevation = dimensionResource(id = R.dimen.space_12),
                 actions = {
                     IconButton(onClick = {
                         showSearchBar = !showSearchBar
@@ -83,7 +84,7 @@ fun SearchBar(
     TextField(
         modifier = modifier
             .fillMaxWidth()
-            .height(60.dp),
+            .height(dimensionResource(id = R.dimen.space_60)),
         value = searchQuery,
         onValueChange = {
             searchQuery = it
